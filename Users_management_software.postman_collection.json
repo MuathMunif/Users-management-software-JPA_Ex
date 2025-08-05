@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "f3b2b0e8-08d1-4e46-b491-b4edd46cba4d",
+		"name": "Users_management_software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41550137",
+		"_collection_link": "https://www.postman.com/test66-6977/workspace/tuwaiq/collection/41550137-f3b2b0e8-08d1-4e46-b491-b4edd46cba4d?action=share&source=collection_link&creator=41550137"
+	},
+	"item": [
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Muath Almutairi\",\n    \"username\": \"muath123\",\n    \"password\": \"passwordMuath\",\n    \"email\": \"muath@example.com\",\n    \"role\": \"user\",\n    \"age\": 30\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Muath\",\n    \"username\": \"muath123\",\n    \"password\": \"passwordMuath\",\n    \"email\": \"muath@example.com\",\n    \"role\": \"user\",\n    \"age\": 30\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"username\": \"Abdullah\",\n        \"password\": \"pass123\",\n        \"email\": \"sultan@example.com\",\n        \"role\": \"Customer\",\n        \"balance\": 50000.760000000000005\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check user data",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get user by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/get-user-by-email/muath@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"get-user-by-email",
+						"muath@example.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users by role",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get user by age >=",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
